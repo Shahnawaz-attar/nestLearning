@@ -12,6 +12,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
 let User = class User {
+    logInsert() {
+        console.log('Inserted user: ' + this.email);
+    }
+    logRemove() {
+        console.log('Removed user: ' + this.email);
+    }
+    logBeforeInsert() {
+        console.log('Before insert user: ' + this.email);
+    }
+    logAfterLoad() {
+        console.log('After load user: ' + this.email);
+    }
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
@@ -25,6 +37,30 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
+__decorate([
+    (0, typeorm_1.AfterInsert)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logInsert", null);
+__decorate([
+    (0, typeorm_1.AfterRemove)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logRemove", null);
+__decorate([
+    (0, typeorm_1.BeforeInsert)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logBeforeInsert", null);
+__decorate([
+    (0, typeorm_1.AfterLoad)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], User.prototype, "logAfterLoad", null);
 User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);

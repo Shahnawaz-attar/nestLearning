@@ -1,0 +1,74 @@
+
+### Create user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "armaan555@gmail.com",
+    "password": "4321"
+}
+
+### findAll users
+GET http://localhost:3000/auth/getAll
+
+
+### /delete/:id
+DELETE http://localhost:3000/auth/delete/54
+
+
+### /update/:id
+PUT http://localhost:3000/auth/update/57
+Content-Type: application/json
+
+{
+    "email": "shah55@gmail.com",
+    "password": "12348"
+}
+
+### getOne
+GET http://localhost:3000/auth/getOne/8
+
+### findAllusers
+GET http://localhost:3000/auth?email=shah55@gmail.com
+
+
+### /patch/:id'
+PATCH http://localhost:3000/auth/patch/8    
+Content-Type: application/json
+
+{
+    "email": "shah555@gmail.com",
+    "password": "12348"
+}
+
+
+###signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "armaan555@gmail.com",
+    "password": "4321"
+}
+
+
+### get Current user
+GET http://localhost:3000/auth/currentUser
+
+
+
+### signout
+POST http://localhost:3000/auth/signout
+
+
+
+
+
+
+###colors/:color  example
+GET http://localhost:3000/auth/colors/red
+
+
+### colors
+GET http://localhost:3000/auth/colors
+
