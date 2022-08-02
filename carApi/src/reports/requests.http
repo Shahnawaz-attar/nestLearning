@@ -1,0 +1,26 @@
+
+### create report
+POST http://localhost:3000/reports/create
+Content-Type: application/json
+
+{
+    "price": 45841,
+    "make": "Mahindra",
+    "mileage": 100,
+    "model": "XUV500",
+    "year": 2021,
+    "lon":  12,
+    "lat" : 77
+
+}
+
+### approve/:id
+PATCH  http://localhost:3000/reports/approve/7
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### getEstimate
+GET http://localhost:3000/reports?make=Mahindra&model=XUV500&year=2021&mileage=100&lon=12&lat=77

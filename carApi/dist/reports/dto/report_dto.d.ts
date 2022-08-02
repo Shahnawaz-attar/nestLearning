@@ -1,7 +1,5 @@
-import { User } from "src/users/user.entity";
-export declare class Report {
+export declare class Report_dto {
     id: number;
-    approved: boolean;
     price: number;
     make: string;
     year: number;
@@ -9,5 +7,6 @@ export declare class Report {
     lon: number;
     lat: number;
     mileage: number;
-    user: User;
+    approved: boolean;
+    userId: number;
 }
